@@ -12,6 +12,19 @@ body {
   background-color: $primary-bg-color;
 }
 
+ul {
+  list-style: none;
+}
+
+input:focus,
+button {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 // Classes
 .container {
   width: 500px;
