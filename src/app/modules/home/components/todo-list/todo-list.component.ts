@@ -9,10 +9,7 @@ import { TaskList } from '../../model/task-list';
   styleUrls: ['./todo-list.component.scss']
 })
 export class TodoListComponent implements OnInit {
-  public taskList: Array<TaskList> = [{
-    task: "Nova tarefa",
-    checked: true
-  }];
+  public taskList: Array<TaskList> = [];
 
   constructor() { }
 
@@ -20,6 +17,13 @@ export class TodoListComponent implements OnInit {
 
   public deleteItemTaskList(value: number): void {
     this.taskList.splice(value, 1);
+  }
+
+  public setEmitTaskList(value: string): void {
+    this.taskList.push({
+      task: value,
+      checked: false
+    });
   }
 
   public deleteAllTaskList(): void {
